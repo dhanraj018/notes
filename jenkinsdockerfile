@@ -1,0 +1,5 @@
+docker build -t dhanraj018/jenk:latest .
+docker push dhanraj018/jenk:latest
+ssh admin@65.0.122.76 docker pull dhanraj018/jenk:latest
+ssh admin@65.0.122.76 docker rm -f mywe2 2>/dev/null || true
+ssh admin@65.0.122.76 docker run -d -p 8080:80 --name mywe2 dhanraj018/jenk:latest
