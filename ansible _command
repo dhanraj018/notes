@@ -1,0 +1,7 @@
+ansible-inventory -i inventory --graph
+ansible webserver -i inventory -m ping
+ansible-playbook -i inventory playbook.yaml -k
+
+option --- second if default option
+
+ ansible-playbook -i inventory playbook.yaml -k -K
